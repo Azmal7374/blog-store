@@ -3,7 +3,7 @@ import React from 'react';
 const Nav = () => {
     return (
         <div>
-        <div className="navbar w-100% h-30 md:p-8" style={{backgroundColor: '#1C2B35'}}>
+        <div className="navbar w-100% h-30 md:p-8 bg-info">
         <div className="flex-1">
         <h2 className="md:text-4xl text-white md:px-5 font-bold">Knowledge Cafe</h2>
         </div>
