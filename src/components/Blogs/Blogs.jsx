@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBookBookmark } from '@fortawesome/free-solid-svg-icons'
 
 const Blogs = (props) => {
     console.log(props.blog);
@@ -23,7 +25,7 @@ const Blogs = (props) => {
 
              <div className="mt-4">
              <p>{read_time} min read
-             
+             <FontAwesomeIcon className="mx-2" icon={faBookBookmark} />
              </p>
              </div>
         </div>
@@ -34,7 +36,7 @@ const Blogs = (props) => {
             <p className="mx-8">#programming</p>
             </div>
             </div>
-            <a onClick="" className="text-start underline text-info cursor-pointer">mark as read</a>
+            <a onClick="" className="text-start underline text-info cursor-pointer">Mark as read</a>
         </div>
     </div>
   );
