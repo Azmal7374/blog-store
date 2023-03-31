@@ -2,7 +2,7 @@ import React from "react";
 
 const QuestionAndAnswer = () => {
   return (
-    <div class="container my-6 px-14 md:px-32 lg:px-64 py-6 flex justify-between bg-slate-200 mt-16 ">
+    <div className="container my-6 px-14 md:px-32 lg:px-64 py-6 flex justify-between bg-slate-200 mt-16 ">
       <div className="qna-area">
         <div className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
           <input type="checkbox" />
@@ -41,7 +41,7 @@ const QuestionAndAnswer = () => {
         <div className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
           <input type="checkbox" />
           <div className="collapse-title text-xl font-medium">
-            3. What is event bubble?
+            3. What else can UseEffect do besides load data?
           </div>
           <div className="collapse-content">
             <p>
@@ -68,7 +68,10 @@ const QuestionAndAnswer = () => {
           <div className="collapse-content">
             <p>
               -->One of the biggest advantages of using React is that you can
-              infuse HTML code with JavaScript. -->Users can create a
+              infuse HTML code with JavaScript. 
+              </p>
+              <p>
+              -->Users can create a
               representation of a DOM node by declaring the Element function in
               React.
             </p>

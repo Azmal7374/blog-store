@@ -4,8 +4,8 @@ import SideCart from "../SideCart/SideCart";
 import "./Home.css";
 import { addToDb, getShoppingCart } from "../../utilities/fakedb";
 import { faVolumeHigh } from "@fortawesome/free-solid-svg-icons";
+import { ToastContainer, toast } from 'react-toastify';
 
-import Swal from "sweetalert2";
 
 const Home = () => {
   const [blogs, setBlogs] = useState([]);
@@ -20,39 +20,16 @@ const Home = () => {
 
   useEffect(() => {}, [blogs]);
 
-  const notify = () => toast("Wow so easy!");
 
   const addedTOBookmarked = (blog) => {
-    const notify = () => toast("Wow so easy!");
     const id = blog.id;
-    const newBlog = [...cart, blog];
-    setCart(newBlog);
-
-    if ((cart === blog) === true) {
-      toast("added");
+    let newBlog =[...cart, blog]
+    const exists = cart.find(b => b.id === id);
+    if(exists) {
+        toast("Already BookMarked!")
+        return newBlog;
     }
-
-    const Toast = Swal.mixin({
-      toast: true,
-      position: "top-end",
-      showConfirmButton: false,
-      timer: 3000,
-      timerProgressBar: true,
-      didOpen: (toast) => {
-        toast.addEventListener("mouseenter", Swal.stopTimer);
-        toast.addEventListener("mouseleave", Swal.resumeTimer);
-      },
-    });
-
-
-    cart.map((c) =>
-      (c !== blog) === false
-        ? Toast.fire({
-            icon: "success",
-            title: "Already  Bookmarked",
-          })
-        : ""
-    );
+    setCart(newBlog);
   };
 
   const addToReadTime = (min) => {

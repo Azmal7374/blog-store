@@ -5,7 +5,8 @@ import './App.css'
 import Nav from './components/Nav/Nav'
 import Home from './components/Home/Home'
 import QuestionAndAnswer from './components/QuestionAndAnswer/QuestionAndAnswer'
-
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,8 +15,8 @@ function App() {
     <div>
         <Nav></Nav>
         <Home></Home>
-
         <QuestionAndAnswer></QuestionAndAnswer>
+        <ToastContainer></ToastContainer>
         </div>
   )
 }
