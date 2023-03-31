@@ -21,7 +21,7 @@ const Blogs = (props) => {
             alt="car!"
           />
         </figure>
-          <div className="flex justify-between mt-4 ml-14">
+          <div className="flex justify-between mt-4 lg:ml-12">
              <div className="flex">
              <img className="w-12 h-12 rounded-full " src={author_img} alt="" />
             <div className="mx-3">
@@ -37,13 +37,13 @@ const Blogs = (props) => {
              </div>
         </div>
         <div className="mt-4">
-        <p className="font-bold text-2xl ml-12">{title}</p>
-            <div className="flex mt-2 ml-12">
+        <p className="font-bold text-2xl lg:ml-10">{title}</p>
+            <div className="flex mt-2 lg:ml-12">
             <p>#beginners</p>
             <p className="mx-8">#programming</p>
             </div>
             </div>
-            <a onClick={()=>addToReadTime(props.blog)}  className="text-start underline text-info cursor-pointer ml-12 mt-3">Mark as read</a>
+            <a onClick={()=>addToReadTime(props.blog)}  className="text-start underline text-info cursor-pointer lg:ml-12 mt-3">Mark as read</a>
         </div>
     </div>
   );
