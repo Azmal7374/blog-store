@@ -1,15 +1,20 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBookBookmark } from '@fortawesome/free-solid-svg-icons'
+import { faBookBookmark, faChessKing } from '@fortawesome/free-solid-svg-icons'
 
 const Blogs = (props) => {
-    console.log(props.blog);
+    // console.log(props.blog);
     const{id, author, title, author_img, poster_image, read_time, publishedAt} = props.blog;
+       
+
+    const addToReadTime =  props.addToReadTime;
+    // console.log(addToReadTime);
+         
   return (
     <div>
-      <div className="card w-96 glass">
+      <div className="card w-4/3 h-4/3 glass" >
         <figure>
-          <img className="w-full h-48 "
+          <img className="w-4/3 "
             src={poster_image}
             alt="car!"
           />
@@ -25,7 +30,7 @@ const Blogs = (props) => {
 
              <div className="mt-4">
              <p>{read_time} min read
-             <FontAwesomeIcon className="mx-2" icon={faBookBookmark} />
+             <FontAwesomeIcon onClick={()=>addToReadTime(props.blog)}  className="mx-2" icon={faBookBookmark} />
              </p>
              </div>
         </div>
@@ -36,7 +41,7 @@ const Blogs = (props) => {
             <p className="mx-8">#programming</p>
             </div>
             </div>
-            <a onClick="" className="text-start underline text-info cursor-pointer">Mark as read</a>
+            <a  className="text-start underline text-info cursor-pointer">Mark as read</a>
         </div>
     </div>
   );
