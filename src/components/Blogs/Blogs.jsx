@@ -8,7 +8,9 @@ const Blogs = (props) => {
        
 
     const addToReadTime =  props.addToReadTime;
+    const addedTOBookmarked = props.addedTOBookmarked;
     // console.log(addToReadTime);
+    // console.log(addedTOBookmarked);
          
   return (
     <div>
@@ -28,9 +30,9 @@ const Blogs = (props) => {
             </div>
              </div>
 
-             <div className="mt-4">
-             <p>{read_time} min read
-             <FontAwesomeIcon onClick={()=>addToReadTime(props.blog)}  className="mx-2" icon={faBookBookmark} />
+             <div className="mt-4 mr-4">
+             <p className="">{read_time} min read
+             <FontAwesomeIcon onClick={()=>addToReadTime(props.blog)}  className="md:mx-2" icon={faBookBookmark} />
              </p>
              </div>
         </div>
@@ -41,7 +43,7 @@ const Blogs = (props) => {
             <p className="mx-8">#programming</p>
             </div>
             </div>
-            <a  className="text-start underline text-info cursor-pointer">Mark as read</a>
+            <a onClick={()=>addedTOBookmarked(props.blog)}  className="text-start underline text-info cursor-pointer">Mark as read</a>
         </div>
     </div>
   );

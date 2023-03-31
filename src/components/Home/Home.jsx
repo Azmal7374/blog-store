@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Blogs from '../Blogs/Blogs';
 import SideCart from '../SideCart/SideCart';
+import './Home.css'
 
 const Home = () => {
     const [blogs, setBlogs ] =useState([]);
     const [cart, setCart] =useState([]);
+    const [time, setTime] =useState([]);
    
     useEffect(() => {
         fetch('data.json')
@@ -24,26 +26,26 @@ const Home = () => {
     }
     console.log(cart);
 
-    const addedTOBookmarked= () => {
-        console.log('add bookmarked');      
+    const addedTOBookmarked= (min) => {
+        console.log('add bookmarked'); 
+        const newAdd = [...time, min]
+        setTime(newAdd)     
     }
+    console.log(time);
 
-    const responsible =  {
+   
     
-    }
-
     // console.log(blogs);
     return (
         <div>
-           <div className="knowledge-container"  style={{ display:'grid', gridTemplateColumns:'3fr 2fr',gridColumnGap:'30px'}}>
+           <div className="knowledge-container"  style={{ }}>
              <div className="blogs-continer products-container grid grid-cols-1 gap-10 mt-10">
                 {
-             blogs.map(blog => <Blogs blog ={blog} key ={blog.id} addToReadTime={addToReadTime}></Blogs>)
+             blogs.map(blog => <Blogs blog ={blog} key ={blog.id} addToReadTime={addToReadTime} addedTOBookmarked={addedTOBookmarked}></Blogs>)
                 }
              </div>
              <div className="sidecart-conatiner mt-10  bg-slate-200 border rounded-lg">
-             <h2>Spent time on read: {0}</h2>
-             <SideCart cart={cart}></SideCart>
+             <SideCart cart={cart} time={time}></SideCart>
              <div>
              </div>
              </div>

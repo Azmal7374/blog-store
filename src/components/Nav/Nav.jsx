@@ -3,16 +3,12 @@ import React from 'react';
 const Nav = () => {
     return (
         <div>
-        <div className="navbar w-100% h-30 md:p-8 bg-white border rounded-md">
+        <div className="navbar  md:w-100% h-30 md:p-8 bg-white border rounded-md">
         <div className="flex-1">
         <h2 className="md:text-4xl text-black md:px-5 font-bold">Knowledge Cafe</h2>
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal md:px-10 text-black font-semibold md:text-2xl">
-            <li><a>Blogs</a></li>
-            <li><a>Contact</a></li>
-            <li><a>Login</a></li>
-          </ul>
+          <img className="w-20 h-20 rounded-full md:mr-10" src="https://img.freepik.com/free-photo/man-using-map-downtown-park_53876-96601.jpg?size=626&ext=jpg&ga=GA1.1.220873417.1673880723&semt=ais" alt="" />
         </div>
       </div>
         </div>

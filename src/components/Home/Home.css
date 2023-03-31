@@ -1,0 +1,14 @@
+.knowledge-container{
+     display: grid;
+     grid-template-columns: 4fr 2fr;
+     grid-column-gap: 30px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .knowledge-container{
+        display:block;
+    }
+  }
+
+
