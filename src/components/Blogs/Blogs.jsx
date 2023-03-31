@@ -32,7 +32,7 @@ const Blogs = (props) => {
 
              <div className="mt-4 mr-4">
              <p className="">{read_time} min read
-             <FontAwesomeIcon onClick={()=>addToReadTime(props.blog)}  className="md:mx-2" icon={faBookBookmark} />
+             <FontAwesomeIcon onClick={()=>addedTOBookmarked(props.blog)}  className="md:mx-2" icon={faBookBookmark} />
              </p>
              </div>
         </div>
@@ -43,7 +43,7 @@ const Blogs = (props) => {
             <p className="mx-8">#programming</p>
             </div>
             </div>
-            <a onClick={()=>addedTOBookmarked(props.blog)}  className="text-start underline text-info cursor-pointer ml-12 mt-3">Mark as read</a>
+            <a onClick={()=>addToReadTime(props.blog)}  className="text-start underline text-info cursor-pointer ml-12 mt-3">Mark as read</a>
         </div>
     </div>
   );

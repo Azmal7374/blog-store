@@ -5,6 +5,7 @@ import './App.css'
 import Nav from './components/Nav/Nav'
 import Home from './components/Home/Home'
 
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -12,7 +13,7 @@ function App() {
     <div>
         <Nav></Nav>
         <Home></Home>
-    </div>
+        </div>
   )
 }
 
