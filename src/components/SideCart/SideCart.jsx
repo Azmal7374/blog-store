@@ -19,7 +19,7 @@ const SideCart = (props) => {
         <div>
 
         <div className="bg-sky-100  border border-info p-3 m-5">
-        <h2 className='text-indigo-600 text-xl'>Spent time on read: {times}</h2>
+        <h2 className='text-indigo-600 text-xl font-bold'>Spent time on read: {times}</h2>
         </div>
 
          <h2  className='font-bold text-2xl mt-5'>Boomarked Blogs: {cart.length}</h2>
@@ -28,7 +28,7 @@ const SideCart = (props) => {
             {
               cart.map(c=>(
                 <div className=" bg-white mx-3 p-2 mt-5">
-                <h2 className="font-semibold text-2xl ">{c.title}</h2>
+                <h2 className="font-semibold text-xl">{c.title}</h2>
               </div>
               )) 
                 

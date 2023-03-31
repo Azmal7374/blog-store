@@ -16,17 +16,17 @@ const Blogs = (props) => {
     <div>
       <div className="card w-4/3 h-4/3 glass" >
         <figure>
-          <img className="w-4/3 "
+          <img className="w-4/3  rounded-lg"
             src={poster_image}
             alt="car!"
           />
         </figure>
-          <div className="flex justify-between mt-4">
+          <div className="flex justify-between mt-4 ml-14">
              <div className="flex">
-             <img className="w-10 h-10 rounded-full" src={author_img} alt="" />
+             <img className="w-12 h-12 rounded-full " src={author_img} alt="" />
             <div className="mx-3">
             <p className="font-bold">{author}</p>
-            <p>{publishedAt}</p>
+            <p className="">{publishedAt}</p>
             </div>
              </div>
 
@@ -37,13 +37,13 @@ const Blogs = (props) => {
              </div>
         </div>
         <div className="mt-4">
-        <p className="font-bold text-xl">{title}</p>
-            <div className="flex mt-2">
+        <p className="font-bold text-2xl ml-12">{title}</p>
+            <div className="flex mt-2 ml-12">
             <p>#beginners</p>
             <p className="mx-8">#programming</p>
             </div>
             </div>
-            <a onClick={()=>addedTOBookmarked(props.blog)}  className="text-start underline text-info cursor-pointer">Mark as read</a>
+            <a onClick={()=>addedTOBookmarked(props.blog)}  className="text-start underline text-info cursor-pointer ml-12 mt-3">Mark as read</a>
         </div>
     </div>
   );
